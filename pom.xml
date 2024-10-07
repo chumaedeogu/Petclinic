@@ -101,14 +101,7 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
-    <dependency>
-    <groupId>org.codehaus.plexus</groupId>
-    <artifactId>plexus-build-api</artifactId>
-    <version>0.0.8</version> <!-- or the latest stable version -->
-    <scope>compile</scope>
-   </dependency>
-
-    <dependencies>
+       <dependencies>
         <dependency>
             <groupId>org.apache.tomcat</groupId>
             <artifactId>tomcat-servlet-api</artifactId>
