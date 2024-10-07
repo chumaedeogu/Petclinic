@@ -557,6 +557,16 @@
             <name>Spring Milestone Repository</name>
             <url>https://repo.spring.io/milestone</url>
         </repository>
+             <repositories>
+    <repository>
+        <id>central</id>
+        <url>https://repo.maven.apache.org/maven2</url>
+    </repository>
+    <repository>
+        <id>spring-milestone</id>
+        <url>https://repo.spring.io/milestone</url>
+    </repository>
+</repositories>
     </repositories>
 
 </project>
