@@ -11,6 +11,11 @@ pipeline {
     }
     
     stages{
+        stage("clean"){
+            steps{
+                cleanWs()
+            }
+        }
         
         stage("Git Checkout"){
             steps{
