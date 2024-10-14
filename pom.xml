@@ -460,9 +460,9 @@
                 </configuration>
             </plugin>
 
-        </plugins>
-        <plugin>
-    <groupId>org.jacoco</groupId>
+      
+          <plugin>
+           <groupId>org.jacoco</groupId>
     <artifactId>jacoco-maven-plugin</artifactId>
     <version>0.8.10</version>
     <executions>
@@ -491,9 +491,9 @@
                 </rules>
             </configuration>
         </execution>
-    </executions>
-</plugin>
-
+        </executions>
+      </plugin>
+  </plugins>
     </build>
 
     <profiles>
