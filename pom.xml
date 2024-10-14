@@ -289,6 +289,11 @@
             <artifactId>javax.activation-api</artifactId>
             <version>${javax-activation.version}</version>
         </dependency>
+    <dependency>
+      <groupId>org.jenkins-ci.plugins</groupId>
+      <artifactId>pitmutation</artifactId>
+      <version>1.0-18</version>
+</dependency>
 
     </dependencies>
 
