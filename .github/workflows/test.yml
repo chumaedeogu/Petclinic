@@ -1,0 +1,34 @@
+name: tes3
+
+on:
+   push:
+     branches:
+      - main
+jobs:
+  test1_1:
+      runs-on: ubuntu-latest
+      steps:
+       - name: update the os
+         run: apt-get update -y
+       - name: install cwosay
+         run: apt install cowsay -y
+       - name: create a cousay
+         run: cowsay -f dragon "Run for cover, I am a DRAGON....RAWR" >> dragon.txt
+       - name: update
+         uses: @actions/upload-artifact
+         with:
+            name: my-dragon
+            path: my-dragon
+  test2_1:
+      needs: test1_1:
+      runs-on: ubuntu-latest
+      steps:
+       - name: update the os
+         run: apt-get update -y
+       - name: downlaod
+         uses: @actions/download-artifact
+         with:
+            name: my-dragon
+          
+
+       
