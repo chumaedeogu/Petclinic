@@ -1,11 +1,11 @@
-name: tes3
+name: test3
 
 on:
    push:
      branches:
       - main
 jobs:
-  test1_1:
+  upload:
       runs-on: ubuntu-latest
       steps:
        - name: update the os
@@ -15,18 +15,19 @@ jobs:
        - name: create a cousay
          run: cowsay -f dragon "Run for cover, I am a DRAGON....RAWR" >> dragon.txt
        - name: update
-         uses: @actions/upload-artifact
+         uses: actions/upload-artifact@v3
          with:
             name: my-dragon
             path: my-dragon
-  test2_1:
-      needs: test1_1:
+
+  download-test:
+      needs: upload
       runs-on: ubuntu-latest
       steps:
        - name: update the os
          run: apt-get update -y
-       - name: downlaod
-         uses: @actions/download-artifact
+       - name: download
+         uses: actions/download-artifact@v3
          with:
             name: my-dragon
           
